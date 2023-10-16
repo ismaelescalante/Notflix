@@ -1,0 +1,40 @@
+<div class="container">
+  <div style="text-align: center">
+    <iframe 
+      [src]="getTrailer((video$ | async) || '')"
+      width="80%"
+      height="350"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div *ngIf="(movie$ | async) as movie">
+    <h1 i18n class="text-center">{{ movie.title }}</h1>
+    <div class="flex justify-content-evenly">
+      <p i18n>
+        <em>Año: {{ movie.release_date | slice : 0 : 4 }}</em>
+      </p>
+      <p i18n>
+        <em>Duración: {{ movie.runtime }} min.</em>
+      </p>
+      <p i18n>
+        <em>Nota: {{ movie.vote_average }}</em>
+      </p>
+      <p-toast [life]="1500" position="top-left"></p-toast>
+      <p-toggleButton
+        pRipple
+        (onChange)="toggleFavorite(movie.id)"
+        [(ngModel)]="checked"
+        onIcon="pi pi-times"
+        offIcon="pi pi-heart"
+        onLabel="Quitar de favoritos"
+        offLabel="Añadir a favoritos"
+      ></p-toggleButton>
+    </div>
+
+    <p i18n class="text-center">{{ movie.overview }}</p>
+    <h2 i18n class="text-center mt-4 mb-4">Reparto</h2>
+
+    <app-carousel [cast]="(cast$ | async) || []"></app-carousel>
+  </div>
+</div>

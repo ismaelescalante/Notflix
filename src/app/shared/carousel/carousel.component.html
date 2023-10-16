@@ -1,0 +1,26 @@
+<p-carousel
+  [value]="cast"
+  [numVisible]="5"
+  [numScroll]="2"
+  [circular]="false"
+  [showIndicators]="false"
+>
+  <ng-template let-actor pTemplate="item">
+    <div class="flex flex-column align-items-center">
+      <img
+        class="w-8rem h-10rem border-round mr-2 mb-1"
+        [src]="
+          actor.profile_path
+            ? 'https://image.tmdb.org/t/p/w500' + actor.profile_path
+            : '/assets/no-image.png'
+        "
+        alt=""
+        *ngIf="actor.profile_path"
+      />
+      <span class="mb-1">{{ actor.name }}</span>
+      <span
+        ><em>{{ actor.character }}</em></span
+      >
+    </div>
+  </ng-template>
+</p-carousel>

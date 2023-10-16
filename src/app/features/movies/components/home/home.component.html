@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="text-center mb-5">
+    <label class="mr-4 absolute top-0 left-50 mt-5"
+      ><i class="pi pi-search" style="font-size: 1rem"></i
+    ></label>
+    <input
+      type="text"
+      class="outline-none h-2rem w-18rem absolute top-0 left-50 mt-4 ml-5"
+      placeholder="Busca una película"
+      (keyup)="onKeyPress(txtInput.value)"
+      #txtInput
+    />
+  </div>
+
+  <ng-container *ngIf="searchedMovie$ | async as searchedMovie; else searched">
+    <app-searched [searchedMovie]="searchedMovie"></app-searched>
+  </ng-container>
+
+  <ng-template #searched>
+    <app-popular></app-popular>
+
+    <app-top-rated></app-top-rated>
+  </ng-template>
+</div>

@@ -1,0 +1,13 @@
+<div class="flex flex-row">
+  <p-sidebar  [(visible)]="sidebarVisible" >
+    <h3 class="ml-5 cursor-pointer" (click)="sidebarVisible = false" [routerLink]="'favorites'">Mis favoritos</h3>
+    <hr class="w-9 mt-2">
+    <h3 class="ml-5">Géneros</h3>
+    <ul class="list-none" *ngFor="let genre of genres$ | async">
+      <li i18n [routerLink]="['genre/', genre.id]" class="cursor-pointer" (click)="sidebarVisible = false" >{{genre.name}}</li>
+    </ul>
+</p-sidebar>
+<p-button styleClass="p-button-secondary" class="mt-1 ml-2" (click)="sidebarVisible = true" icon="pi pi-bars"></p-button>
+  <h1 [routerLink]="['/']" class="ml-4 mb-0 cursor-pointer">NOTFLIX</h1>
+</div>
+
