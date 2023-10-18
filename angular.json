@@ -4,10 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "movies-app": {
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {"en-GB": "src/locale/messages.en.xlf"}
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["en-GB"],
             "outputPath": "dist/movies-app",
             "index": "src/index.html",
             "main": "src/main.ts",
