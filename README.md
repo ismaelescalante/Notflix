@@ -2,7 +2,7 @@
 
 This app displays information about movies, where you can perform a custom search or search by movie genre. You can also save movies to favorites and view the movies you have previously saved. 
 
-It has been developed with **Angular**, with **PrimeNG** as the components library. It consumes The Movie Database (TMDB) API.
+It has been developed with **Angular**, with **PrimeNG** as the component library. It consumes The Movie Database (TMDB) API.
 
 ## Screenshots
 Homepage where you can see popular and top rated movies and search the movie you want
