@@ -1,27 +1,41 @@
-# MoviesApp
+# Notflix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+This app displays information about movies, where you can perform a custom search or search by movie genre. You can also save movies to favorites and view the movies you have previously saved. 
 
-## Development server
+It has been developed with **Angular**, with **PrimeNG** as the components library. It consumes The Movie Database (TMDB) API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshots
+Homepage where you can see popular and top rated movies and search the movie you want
 
-## Code scaffolding
+![Captura de pantalla (3)](https://github.com/ismaelescalante/notflix/assets/96469912/6a1a58b9-8343-47ba-9c08-1ce59b502d09)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Detail of the movie where you can see a YouTube trailer, the plot of the movie, the cast and more info. You can also save it to favorites.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Captura de pantalla (4)](https://github.com/ismaelescalante/notflix/assets/96469912/7783ed9e-1a01-424b-bb23-c228765dbb37)
 
-## Running unit tests
+List of movie genres
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Captura de pantalla (5)](https://github.com/ismaelescalante/notflix/assets/96469912/75578895-1c03-4710-af2c-6015b8a2e9ce)
 
-## Running end-to-end tests
+Favorites view 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Captura de pantalla (6)](https://github.com/ismaelescalante/notflix/assets/96469912/462ba711-7824-4c96-8b83-970ca9c03f2d)
 
-## Further help
+## Environment variables
+You will need to create an environment.ts file and add the following: 
+```
+export const environments = {
+    API_KEY: // Your personal API KEY from The Movie Database
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Installation
+
+Run <code>npm install</code> on the root folder to install all dependencies.<br>
+
+Run <code>npm run</code> on the root folder to start the app.<br>
+
+Open http://localhost:4200 to view it in the browser.
